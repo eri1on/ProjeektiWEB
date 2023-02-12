@@ -1,6 +1,6 @@
 function ValidimiFormes() {
-    const NameRegex = /^[A-Za-z]+$/;
-    const LastnameRegex = /^[A-Za-z]+$/;
+    const NameRegex = /^[A-Za-z]+[a-zA-Z]{1,}/;
+    const LastnameRegex = /^[A-Za-z]+[a-zA-Z]{1,}/;
     const EmailRegex = /^[a-z A-Z 0-9]+\w[_.-]?\w+@[a-z]+.[a-z]{2,3}/;
     const PasswordRegex = /^[A-Z a-z 0-9 ?!/.]+\w[A-Z a-z 0-9 ?!/.]/;
   
@@ -16,7 +16,7 @@ function ValidimiFormes() {
     }
   
     if (!NameRegex.test(NameInput)) {
-      alert("The name can contain only letters !");
+      alert("The name can contain only letters and have at least 2 characters !");
       document.getElementById("Name").focus();
       return false;
     }
@@ -28,7 +28,7 @@ function ValidimiFormes() {
     }
   
     if (!LastnameRegex.test(LastNameInput)) {
-      alert("Last name can contains only letters !");
+      alert("Last name can contains only letters and have at least 2 characters !");
       document.getElementById("lastname").focus();
       return false;
     }
