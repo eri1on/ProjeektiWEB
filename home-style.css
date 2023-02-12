@@ -294,7 +294,7 @@ justify-content: center;
 
 
 
-.name{
+#name{
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -305,10 +305,10 @@ justify-content: center;
   height:30px;
 
 }
-.name:hover{
+#name:hover{
   background-color: #B3FFAE;
 }
-.lastname{
+#lastname{
   text-align: center;
   border-radius: 8px;
   width:150px;
@@ -316,11 +316,11 @@ justify-content: center;
 
 
 }
-.lastname:hover{
+#lastname:hover{
   background-color: #B3FFAE;
 }
 
-.email{
+#email{
   text-align: center;
   margin-bottom: 25px;
   margin-left: 70px;
@@ -330,7 +330,7 @@ justify-content: center;
 
 
 }
-.email:hover{
+#email:hover{
   background-color: #B3FFAE;
 }
 .textarea{
@@ -343,7 +343,7 @@ justify-content: center;
   background-color: #B3FFAE;
 }
 
-.submit{
+#submit{
 
   text-align: center;
   width:325px;
@@ -352,6 +352,6 @@ justify-content: center;
   margin-top: 25px;
   border-radius: 8px;
 }
-.submit:hover{
+#submit:hover{
   background-color: #A6D1E6;
 }
