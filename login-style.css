@@ -42,7 +42,7 @@ margin-left: 150px;
     text-align: center;
     border-style:groove;
 }
-.name{
+#Name{
   margin:20px;
   width:150px;
   height: 30px;
@@ -50,7 +50,7 @@ margin-left: 150px;
     background-color: #0f0e17;
 
 }
-.lastname{
+#lastname{
   width:150px;
   border-radius: 8px;
   height: 30px;
@@ -85,10 +85,10 @@ margin-left: 150px;
 .register-email:hover{
   background-color: #DEF5E5;
 }
-.name:hover{
+#Name:hover{
   background-color: #DEF5E5;
 }
-.lastname:hover{
+#lastname:hover{
   background-color: #DEF5E5;
 }
 
@@ -139,7 +139,7 @@ margin-left: 150px;
     text-align: center;
     border-style:groove;
 }
-.name{
+#Name{
   margin:20px;
   width:150px;
   height: 30px;
@@ -147,7 +147,7 @@ margin-left: 150px;
     background-color: #0f0e17;
 
 }
-.lastname{
+#lastname{
   width:150px;
   border-radius: 8px;
   height: 30px;
@@ -165,15 +165,6 @@ margin-left: 150px;
   width:150px;
   height: 30px;
     background-color: #0f0e17;
-}
-.telephone{
-  margin-top:10px;
-  border-radius: 8px;
-  height: 30px;
-    background-color: #0f0e17;
-}
-.telephone:hover{
-  background-color: #DEF5E5;
 }
 .register-password:hover{
   background-color: #DEF5E5;
