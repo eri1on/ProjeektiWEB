@@ -1,32 +1,67 @@
-function valido(){
+function ValidimiFormes() {
+    const NameRegex = /^[A-Za-z]+$/;
+    const LastnameRegex = /^[A-Za-z]+$/;
+    const EmailRegex = /^[a-z A-Z 0-9]+\w[_.-]?\w+@[a-z]+.[a-z]{2,3}/;
+    const PasswordRegex = /^[A-Z a-z 0-9 ?!/.]+\w[A-Z a-z 0-9 ?!/.]/;
+  
+    var NameInput = document.getElementById('Name').value;
+    var LastNameInput = document.getElementById('lastname').value;
+    var EmailInput = document.getElementById('email').value;
+    var PasswordInput = document.getElementById('password').value;
+  
+    if (NameInput === "") {
+      alert("Please enter your name !");
+      document.getElementById("Name").focus();
+      return false;
+    }
+  
+    if (!NameRegex.test(NameInput)) {
+      alert("The name can contain only letters !");
+      document.getElementById("Name").focus();
+      return false;
+    }
+  
+    if (LastNameInput === "") {
+      alert("Please enter your lastname !");
+      document.getElementById("lastname").focus();
+      return false;
+    }
+  
+    if (!LastnameRegex.test(LastNameInput)) {
+      alert("Last name can contains only letters !");
+      document.getElementById("lastname").focus();
+      return false;
+    }
+  
+    if (EmailInput === "") {
+      alert("Email cannot be empty");
+      document.getElementById("email").focus();
+      return false;
+    }
+  
+    if (!EmailRegex.test(EmailInput)) {
+      alert("Please enter a valid  email address");
+      document.getElementById("email").focus();
+      return false;
+    }
+  
+    if (PasswordInput === "") {
+      alert("Password cannot be empty !");
+      document.getElementById("password").focus();
+      return false;
+    }
+      if(!PasswordRegex.test(PasswordInput)){
+          alert("Please enter a valid Password !!");
+          document.getElementById("password").focus;
+          return false
+      }
 
-var email=document.getElementById('email').value
+      if (PasswordInput.length < 8) {
+        alert("Password must be at least 8 characters long");
+        document.getElementById("password").focus();
+        return false;
+    }
+    
 
-if(email==('')){
-console.log(confirm('email cannot be null'));
-}
-
-
-var password=document.getElementById('password').value
-if(password==('')){
- console.log(confirm('password cannot be null'));
-}
-
-var name =document.getElementsByClassName('name').value
-if(name==null||name==('')){
-console.log(confirm('name cannot be null'))
-return false;
-}
-var lastname = document.getElementsByClassName('lastname').value
-if(lastname ==null||lastname==('')){
-    console.log(confirm('lastName cannot be null'))
-}
-else{
- console.log(confirm('te dhenat jane rregull'));
-}
-
-
-
-
-
+    alert("validation completed successfully");
 }
