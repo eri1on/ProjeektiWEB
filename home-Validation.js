@@ -51,3 +51,12 @@ return false;
 alert("validation completed successfully");
 
 }
+/*  it clears the field input  when submit button is pressed
+
+function  {
+    document.getElementById("name").value = "";
+    document.getElementById("lastname").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("textarea").value = "";
+  }
+  */
