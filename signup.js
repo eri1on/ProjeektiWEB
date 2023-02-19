@@ -1,11 +1,11 @@
 function ValidimiFormes() {
   const NameRegex = /^[A-Za-z]+[a-zA-Z]{1,}/;
-  const LastnameRegex = /^[A-Za-z]+[a-zA-Z]{1,}/;
+ 
   const EmailRegex = /^[a-z0-9]+([_.-][a-z0-9]+)*@[a-z0-9]+([.-][a-z0-9]+)*\.[a-z]{2,3}$/;
   const PasswordRegex = /^[A-Z a-z 0-9 ?!/.]+\w[A-Z a-z 0-9 ?!/.]/;
 
   var NameInput = document.getElementById('Name').value;
-  var LastNameInput = document.getElementById('lastname').value;
+
   var EmailInput = document.getElementById('email').value;
   var PasswordInput = document.getElementById('password').value;
 
@@ -20,7 +20,7 @@ function ValidimiFormes() {
     document.getElementById("Name").focus();
     return false;
   }
-
+/*
   if (LastNameInput === "") {
     alert("Please enter your lastname !");
     document.getElementById("lastname").focus();
@@ -32,6 +32,7 @@ function ValidimiFormes() {
     document.getElementById("lastname").focus();
     return false;
   }
+  */
 
   if (EmailInput === "") {
     alert("Email cannot be empty");
@@ -64,11 +65,14 @@ function ValidimiFormes() {
   }
 
   alert("validation completed successfully");
+  
 }
 
+
+/*
 var submitBtn = document.getElementById("submit-btn");
 submitBtn.addEventListener("click", function(event) {
-  event.preventDefault();
+  //event.preventDefault();
   ValidimiFormes();
 });
 
