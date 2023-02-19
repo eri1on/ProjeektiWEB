@@ -3,7 +3,8 @@ function  Validation(){
 
 const NameRegex=/^[A-Za-z]+[a-zA-Z]{1,}/;
 const LastNameRegex=/^[A-Za-z]+[a-zA-Z]{1,}/;
-const EmailRegex=/^[a-z A-Z 0-9]+\w[_.-]?\w+@[a-z]+.[a-z]{2,3}/;
+const EmailRegex=/^[a-z0-9]+([_.-][a-z0-9]+)*@[a-z0-9]+([.-][a-z0-9]+)*\.[a-z]{2,3}$/;
+
 
 var NameInput=document.getElementById('name').value;
 var LastnameInput=document.getElementById('lastname').value;
