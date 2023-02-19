@@ -10,13 +10,13 @@ function ValidimiFormes() {
   var PasswordInput = document.getElementById('password').value;
 
   if (NameInput === "") {
-    alert("Please enter your name !");
+    alert("Please enter your username !");
     document.getElementById("Name").focus();
     return false;
   }
 
   if (!NameRegex.test(NameInput)) {
-    alert("The name can contain only letters and have at least 2 characters !");
+    alert("username can contain only letters and have at least 2 characters !");
     document.getElementById("Name").focus();
     return false;
   }
