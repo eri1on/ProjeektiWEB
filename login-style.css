@@ -1,0 +1,114 @@
+.title{
+
+    font-family: monospace;
+  float: left;
+  margin-left: 150px;
+    margin-top:40px;
+    color: white;
+  }
+  .h2{
+    color:white;
+    padding-top: 20px;
+  }
+  
+  
+  
+  
+  
+  body{
+  
+   
+  
+   background-image: url('https://cdn-icons-png.flaticon.com/512/9770/9770981.png');
+
+   background-repeat: no-repeat;
+   background-color:lavender;
+  
+  
+  }
+  
+  
+  
+  *{
+    text-align: center;
+  }
+  .register{
+  
+  
+  
+      background-color:darkcyan;
+      width:450px;
+      height: 380px;
+      margin-top: 100px;
+      border-radius: 40px;
+      display: inline-block;
+      text-align: center;
+      border-style:groove;
+      margin-left:320px;
+  }
+  #Name{
+    margin:20px;
+    width:320px;
+    height: 30px;
+    border-radius: 8px;
+      
+  
+  }/*
+  #lastname{
+    width:150px;
+    border-radius: 8px;
+    height: 30px;
+      background-color: #0f0e17;
+  }*/
+  .register-email{
+    margin:20px;
+    border-radius: 8px;
+    width:150px;
+    height: 30px;
+      
+  }
+  .register-password{
+    border-radius: 8px;
+    width:150px;
+    height: 30px;
+      
+  }/*
+  .telephone{
+    margin-top:10px;
+    border-radius: 8px;
+    height: 30px;
+      background-color: #0f0e17;
+  }
+  
+  .telephone:hover{
+    background-color: #DEF5E5;
+  }
+  */
+  .register-password:hover{
+    background-color: #DEF5E5;
+  }
+  
+  .register-email:hover{
+    background-color: #DEF5E5;
+  }
+  #Name:hover{
+    background-color: #DEF5E5;
+  }
+  #lastname:hover{
+    background-color: #DEF5E5;
+  }
+  
+  .submit{
+    margin-top: 50px;
+    width:230px;
+    height: 30px;
+      background-color:cadetblue;
+      text-align: center;
+      border-radius: 40px;
+      color:#fffffe;
+        box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+  }
+  
+  .submit:hover{
+    background-color:#06283D;
+  }
