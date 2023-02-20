@@ -1,4 +1,4 @@
-function ValidimiFormes(event) {
+function ValidimiFormes() {
   
 
   const NameRegex = /^[A-Za-z]+[a-zA-Z]{1,}/;
