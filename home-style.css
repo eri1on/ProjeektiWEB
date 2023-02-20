@@ -1,3 +1,9 @@
+.logout{
+  BORDER-STYLE: outset;
+  COLOR: FIREBRICK;
+}
+
+
 *{
   margin: 0;
   padding: 0;
