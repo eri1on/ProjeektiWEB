@@ -14,14 +14,12 @@
 <form class="SignUpForm" method="POST">
   <h2 class="h2">Login</h2>
   <input id="Name" type="text" name="username" placeholder="Username"><br>
-
-  <input id="email" class="register-email" name="email" type ="email" placeholder="Email">
   <input  id="password" class="register-password" name="password" type="password"placeholder="Password"><br>
 
   <input class="submit" type="submit" onclick=ValidimiFormes()>
 </form>
 
 </div>       
-        <script src="" async defer></script>
+        <script src="login.js"> </script>
     </body>
 </html>
