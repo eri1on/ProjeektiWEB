@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+  header('location:login.php');
+ 
+ }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +27,10 @@
    
 
     <div>
+    <a class="logout" href="logout.php" class="btn">LOGOUT</a>
       <nav>
         <img class="ubt-logo" src="https://www.ubt-uni.net/wp-content/uploads/2018/05/DCIMUNTLOGO123-6.png">
+
         <ul>
           <li><a href="#about-section">ABOUT</a></li>
           <li> <a href="CSE.html">CSE</a></li>
