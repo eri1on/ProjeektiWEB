@@ -27,6 +27,7 @@ if(!isset($_SESSION['username'])){
    
 
     <div>
+     <a href="login.php" ><button class="dashboard-button" >Dashboard</button></a>
     <a class="logout" href="logout.php" class="btn">LOGOUT</a>
       <nav>
         <img class="ubt-logo" src="https://www.ubt-uni.net/wp-content/uploads/2018/05/DCIMUNTLOGO123-6.png">
