@@ -62,16 +62,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 ?>
 
 
-    <div class="register">
-<form class="SignUpForm" method="POST">
-  <h2 class="h2">Login</h2>
-  <input id="Name" type="text" name="username" placeholder="Username"><br>
-  <input  id="password" class="register-password" name="password" type="password"placeholder="Password"><br>
-  
-  <input class="submit" type="submit" onclick=ValidimiFormes()>
-</form>
-
-</div>       
+<div class="register">
+  <form class="SignUpForm" method="POST" onsubmit="return ValidimiFormes();">
+    <h2 class="h2">Login</h2>
+    <input id="Name" type="text" name="username" placeholder="Username"><br>
+    <input id="password" class="register-password" name="password" type="password" placeholder="Password"><br>
+    <div id="error" style="color: red;"></div>
+    <input class="submit" type="submit">
+  </form>
+</div>
+       
         <script src="login.js"> </script>
     </body>
 </html>
