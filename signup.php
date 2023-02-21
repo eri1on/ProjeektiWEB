@@ -5,14 +5,17 @@ $user=0;
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     include 'DB/connect.php';
-
+     
+     
     // Check if required fields are not empty
     if(!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password'])){
+     
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $sql = "SELECT * FROM `user` WHERE username='$username'";
+        $sql = "SELECT * FROM `user` WHERE username='$username'   " ;
+        
         $result = mysqli_query($con,$sql);
 
         if($result){
@@ -24,17 +27,17 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 $sql = "INSERT INTO `user`(username,email,password) VALUES ('$username','$email','$password')";
                 $result = mysqli_query($con,$sql);
                 if($result){
+                  
                   //  echo "Signup successful";
                   $succes=1;
-                    header('location:signup.php');
+                    header('location:login.php');
                 }else{
                     die(mysqli_error($con));
                 }
             }
         }
-    } else {
-        echo "Please fill out all required fields.";
-    }
+      
+    } 
 }
 ?>
 
@@ -46,7 +49,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
+    <title>SIGNUP</title>
 
 
     <link rel="stylesheet" href="signup-style.css">
@@ -86,14 +89,15 @@ if ($user) {
  
 
 
-<form class="SignUpForm" method="POST">
+<form class="SignUpForm" method="POST" onsubmit="return ValidimiFormes();">
+
   <h2 class="h2">SIGN UP</h2>
   <input id="Name" type="text" name="username" placeholder="Username"><br>
 
   <input id="email" class="register-email" name="email" type ="email" placeholder="Email">
   <input  id="password" class="register-password" name="password" type="password"placeholder="Password"><br>
-
-  <input class="submit" type="submit" onclick=ValidimiFormes()>
+  <div id="error" style="color: red;"></div>
+  <input class="submit" type="submit">
 </form>
 
 
