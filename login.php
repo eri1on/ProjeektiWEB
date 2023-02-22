@@ -23,6 +23,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
            $valid=1;
            session_start();
            $_SESSION['username']=$username;
+     
            header('location:home.php');
        }else {
           $invalid=1;
