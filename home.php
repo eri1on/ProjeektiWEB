@@ -1,10 +1,12 @@
 <?php
 
 session_start();
-
+include 'DB/connect.php';
 if(!isset($_SESSION['username'])){
   header('location:login.php');
  
+ }else{
+  $username = $_SESSION['username'];
  }
 
 
@@ -27,7 +29,24 @@ if(!isset($_SESSION['username'])){
    
 
     <div>
-     <a href="login.php" ><button class="dashboard-button" >Dashboard</button></a>
+    <?php 
+    
+    $sql = "SELECT * FROM `user` WHERE username = '$username' LIMIT 1";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
+
+// check if user is an admin
+if ($row['role'] == 1) {
+    // show Dashboard button for admin users
+    echo '<a href="dashboard.php"><button class="dashboard-button">Dashboard</button></a>';
+}
+    
+    
+    
+    
+    
+    ?>
+   
     <a class="logout" href="logout.php" class="btn">LOGOUT</a>
       <nav>
         <img class="ubt-logo" src="https://www.ubt-uni.net/wp-content/uploads/2018/05/DCIMUNTLOGO123-6.png">
