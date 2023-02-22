@@ -1,0 +1,69 @@
+/* Reset default styles for some elements */
+ body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Center the content horizontally */
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Style for the header */
+header {
+	background-color: #333;
+	color: white;
+	padding: 20px;
+}
+
+/* Style for the marketing section */
+.marketing {
+	margin-bottom: 30px;
+	text-align: left;
+	padding: 20px;
+}
+
+/* Style for the courses section */
+.courses {
+	padding: 20px;
+}
+
+/* Style for the courses table */
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+th {
+	background-color: #333;
+	color: white;
+}
+
+/* Responsive styles for small screens */
+/*
+@media screen and (max-width: 600px) {
+	main {
+		max-width: 100%;
+	}
+	
+	table {
+		display: block;
+	}
+	
+	th, td {
+		display: block;
+	}
+	
+	th {
+		text-align: center;
+	}
+}
+*/
