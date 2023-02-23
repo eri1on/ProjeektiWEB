@@ -52,9 +52,11 @@ include '../DB/connect.php';
                           <td>'.$name.'</td>
                           <td>'.$price.'</td>
                           <td>'.$description.'</td>
-                          <th scope="row">'.$id.'</th>
+                          <td scope="row" class="course-id">'.$id.'</td>
                       
-                          
+                          <td>  <button class="btn-update"> <a href="update.php?updateid='.$id.'">Update</a> </button>  </td>
+                          <td>  <button class="btn-delete"> <a href="delete.php?deleteid='.$id.'">Delete</a> </button>  </td>
+                         
                           
                           
                           
@@ -74,6 +76,6 @@ include '../DB/connect.php';
 			</table>
 		</section>
 	</main>
-        <script src="" async defer></script>
+        
     </body>
 </html>
