@@ -23,6 +23,8 @@ header {
 	margin-bottom: 30px;
 	text-align: left;
 	padding: 20px;
+	font-family:monospace;
+	font-weight: bold;
 }
 
 /* Style for the courses section */
@@ -63,7 +65,7 @@ th {
 	
 }
 .btn-delete{
-	background-color:red;
+	background-color:burlywood;
 	border-style: none;
 	
 	
@@ -72,9 +74,30 @@ th {
 .btn-delete a{
 	text-decoration: none;
 	font-weight: bold;
-	color:white;
+	color:red;
 	
 }
+
+
+.btn-create{
+	background-color:#333;
+	border-style: none;
+    width: 120px;
+	height:30px;
+	display: flex;
+	margin-left: 20px;
+	align-items: center;
+}
+.btn-create  a{
+	text-decoration: none;
+	font-weight: bold;
+	color:lawngreen;
+}
+
+.course-id{
+	display: none;
+}
+
 
 
 /* Responsive styles for small screens */
