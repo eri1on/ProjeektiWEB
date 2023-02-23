@@ -22,9 +22,9 @@ include '../DB/connect.php';
 	
 	<main>
 		<section class="marketing">
-			<p>Learn from the best! Our courses are designed to help you master new skills quickly and effectively. With our experienced instructors and hands-on projects, you'll gain practical experience and be ready to apply your new skills in the real world. Choose from a variety of courses below and start learning today!</p>
+			<p class="p">Learn from the best! Our courses are designed to help you master new skills quickly and effectively. With our experienced instructors and hands-on projects, you'll gain practical experience and be ready to apply your new skills in the real world. Choose from a variety of courses below and start learning today!</p>
 		</section>
-		
+        <button class="btn-create"> <a href="create-course.php">ADD COURSE </a></button> 
 		<section class="courses">
 			<table>
 				<tr>
@@ -51,11 +51,11 @@ include '../DB/connect.php';
                          
                           <td>'.$name.'</td>
                           <td>'.$price.'</td>
-                          <td>'.$description.'</td>
+                          <td >'.$description.'</td>
                           <td scope="row" class="course-id">'.$id.'</td>
                       
-                          <td>  <button class="btn-update"> <a href="update.php?updateid='.$id.'">Update</a> </button>  </td>
-                          <td>  <button class="btn-delete"> <a href="delete.php?deleteid='.$id.'">Delete</a> </button>  </td>
+                          <td>  <button class="btn-update"> <a href="update-course.php?updateid='.$id.'">Update</a> </button>  </td>
+                          <td>  <button class="btn-delete"> <a href="delete-course.php?deleteid='.$id.'">Delete</a> </button>  </td>
                          
                           
                           
@@ -64,8 +64,10 @@ include '../DB/connect.php';
                           
                           
                           ';
+                         
+                          
                      }
-
+                    
 
 
                 }
@@ -74,6 +76,7 @@ include '../DB/connect.php';
 
                  ?>
 			</table>
+            
 		</section>
 	</main>
         
