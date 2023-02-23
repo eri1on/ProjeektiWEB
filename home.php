@@ -38,7 +38,7 @@ $row = mysqli_fetch_assoc($result);
 // check if user is an admin
 if ($row['role'] == 1) {
     // show Dashboard button for admin users
-    echo '<a href="dashboard.php"><button class="dashboard-button">Dashboard</button></a>';
+    echo '<a href="DB/dashboard.php"><button class="dashboard-button">Dashboard</button></a>';
 }
     
     
