@@ -1,23 +1,23 @@
 <?php
 
-include '../DB/connect.php';
+include 'connect.php';
 
-if (isset($_GET['deleteid'])){
-    $id=$_GET['deleteid'];
-
-  $sql="delete from `course` where id=$id";
+if(isset($_GET['deleteid'])){
+$id=$_GET['deleteid'];
 
 
-  $result=mysqli_query($con,$sql);
-  if($result){
-      header('location:course.php');
-  }else{
+$sql="delete from `course` where id=$id";
+
+$result=mysqli_query($con,$sql);
+if($result){
+    //echo "Deleted successfull.";
+    header('location:course.php');
+}else {
     die(mysqli_error($con));
-  }
+}
 
 
 }
-
 
 
 ?>
