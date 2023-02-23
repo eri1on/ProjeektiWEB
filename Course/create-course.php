@@ -2,11 +2,20 @@
 
 
 include '../DB/connect.php';
+
 if(isset($_POST['submit'])){
 $name=$_POST['name'];
 $price=$_POST['price'];
 $description=$_POST['description'];
 
+
+if(empty($name) || empty($price) || empty($description)){
+  echo 'Please fill all the fields.';
+} else if(!is_numeric($price)){
+  echo 'Price should be a number.';
+}
+
+else {
 
 $sql="insert into `course`(name,price,description) values('$name',$price,'$description')" ;
 $result=mysqli_query($con,$sql);
@@ -20,8 +29,10 @@ if($result){
 
 
 
+}
 
 }
+
 
 
 ?>
@@ -90,14 +101,17 @@ label {
 		<label for="name">Course Name:</label>
 		<input type="text" id="courseName" name="name">
 
+
 		<label for="price">Price:</label>
 		<input type="text" id="price" name="price">
+    
 
-		<label for="description">Description (maximum 255 characters):</label>
-        <textarea id="description" name="description" maxlength="255"></textarea>
+		<label for="description">Description (maximum 100 characters):</label>
+        <textarea id="description" name="description" maxlength="100"></textarea>
 
 
-		<input class="submit" type="submit" value="Submit" name='submit'>
+		<input class="submit" type="submit" value="Submit" name='submit' >
 	</form>
+  <scrpt src="create-course.js"></script>
 </body>
 </html>
