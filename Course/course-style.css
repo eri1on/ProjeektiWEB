@@ -47,6 +47,40 @@ th {
 	color: white;
 }
 
+.course-id{
+  display:none;
+}
+
+
+
+.btn-update{
+	background-color:olivedrab;
+	border-style: none;
+	
+	
+	
+}
+.btn-update a{
+	text-decoration: none;
+	font-weight: bold;
+	color:white;
+	
+}
+.btn-delete{
+	background-color:red;
+	border-style: none;
+	
+	
+	
+}
+.btn-delete a{
+	text-decoration: none;
+	font-weight: bold;
+	color:white;
+	
+}
+
+
 /* Responsive styles for small screens */
 /*
 @media screen and (max-width: 600px) {
