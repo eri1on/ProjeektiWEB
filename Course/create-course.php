@@ -1,3 +1,35 @@
+<?php
+
+
+include '../DB/connect.php';
+if(isset($_POST['submit'])){
+$name=$_POST['name'];
+$price=$_POST['price'];
+$description=$_POST['description'];
+
+
+$sql="insert into `course`(name,price,description) values('$name',$price,'$description')" ;
+$result=mysqli_query($con,$sql);
+
+if($result){
+    //echo'data inserted successfull.';
+    header('location:course.php');
+}else{
+    die(mysqli_error($con));
+}
+
+
+
+
+}
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,7 +86,7 @@ label {
 </head>
 <body>
 	<h1>Enter Course Details</h1>
-	<form>
+	<form method="POST">
 		<label for="name">Course Name:</label>
 		<input type="text" id="courseName" name="name">
 
@@ -65,7 +97,7 @@ label {
         <textarea id="description" name="description" maxlength="255"></textarea>
 
 
-		<input class="submit" type="submit" value="Submit">
+		<input class="submit" type="submit" value="Submit" name='submit'>
 	</form>
 </body>
 </html>
