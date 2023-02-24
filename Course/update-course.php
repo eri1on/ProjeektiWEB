@@ -1,6 +1,31 @@
 <?php
 include '../DB/connect.php';
+
+
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+  header('location:../login.php');
+   exit;
+ }
+     $username = $_SESSION['username'];
+ 
+ 
+ // check if the user is an admin
+ $query = "SELECT role FROM user WHERE username='$username'";
+ $result = mysqli_query($con, $query);
+ $row = mysqli_fetch_assoc($result);
+ $role = $row['role'];
+ 
+ // display the add course button if the user is an admin
+ if (!$role == 1) {
+     header('location:../home.php');
+     exit;
+ }
+
 $id=$_GET['updateid'];
+
 $sql="select * from `course` where id=$id";
 $result=mysqli_query($con,$sql);
 $row=mysqli_fetch_assoc($result);
@@ -33,7 +58,7 @@ if(isset($_POST['submit'])){
 }
 }
 
-
+ 
 
 ?>
 
@@ -43,7 +68,7 @@ if(isset($_POST['submit'])){
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Update Course</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="course-style.css">
