@@ -1,0 +1,194 @@
+*{
+    margin-top: 0;
+    padding-top: 0;
+}
+body{
+    margin:0px;
+    background-color:#E9F8F9; 
+    text-align: center;
+    
+}
+.topDiv{
+    display: flex;
+}
+
+
+.left-div{
+  
+    background-color:#E9F8F9;   
+    height:100vh;
+    width:30vw;
+    
+}
+
+.title-h2{
+    text-align: center;
+    padding-top:60px;
+    margin-left:30px;
+    color:darkslategray;
+}
+.left-div li{
+    list-style-type: none;
+    text-align: center;
+    margin: 80px;
+    border-style:outset;
+    border-color:#E9F8F9;
+    border-radius: 40px;
+    color:#205E61;
+}
+.left-div li:hover{
+    border-color:#C0EEF2;
+  
+}
+
+
+/*SLIDER  DIV ///////////////////////////*/
+.slider{
+    overflow: hidden;
+    width:410px;
+   margin-left: 300px;
+   margin-top: 100px;
+   margin-bottom: 20px;;
+   border-style:outset;
+   border-radius: 40px;
+   text-align: center;
+   
+
+}
+
+.images{
+    display: flex;
+    
+}
+.images img{
+    transition: 5s;
+}
+.photo-html{
+    width:400px;
+    height:400px;
+}
+.photo-css{
+    width:400px;
+    height:400px;
+}
+.photo-javascript{
+    width:400px;
+    height:400px;
+}
+.photo-php{
+    width:400px;
+    height:400px;
+}
+
+/*  PARAGRAPHS*/
+
+.phtml{
+    display: none;
+}
+.pcss{
+    display: none;
+}
+.pjava{
+    display: none;
+}
+.pphp{
+    display: none;
+}
+
+.slider span{
+    color:brown;
+    border-style: outset;
+  
+}
+.slider p{
+    font-family:cursive;
+    font-weight:100;
+    
+}
+
+
+
+/*INTRODUCTION   */
+#introduction{
+    text-align: center;
+    padding-top: 300px;
+}
+#introduction h2{
+    color:#205E61;
+}
+.intro-img{
+float: right;
+width:200px;
+}
+.paragraph{
+    text-align: left;
+    padding-top: 30px;
+    color:cadetblue;
+    font-family: cursive;
+}
+.intro-div{
+    display: flex;
+     width:600px;
+     margin-left:400px;
+     margin-top: 80px;
+    margin-bottom: 300px;
+    
+}
+
+/*SKILLS //////////////////// */
+
+#skills{
+    margin-bottom: 300px;
+    
+}
+
+#skills img{
+width:200px;
+}
+.skills-ul-div{
+    border-style:double;
+    border-radius: 40px;
+    color:cadetblue;
+    width:600px;
+    margin-left: 400px;
+    margin-top: 80px;
+}
+   h2{
+    color:#205E61;
+}
+
+.skills-ul-div ul{
+
+   margin-top: 30px;
+}
+.skills-ul-div li{
+    list-style-type:circle;
+    margin: 10px;
+}
+
+/*career //////////////// */
+
+#career p{
+    margin-top: 40px;
+    color:darkgreen;
+    font-family: cursive;
+    margin-bottom: 50px;
+}
+
+#career li{
+    
+    margin:10px;
+    list-style-type:none;
+    display: inline-block;
+   
+    border-radius: 20px;;
+}
+
+.p1{
+    color:cadetblue !important;
+
+
+}
+.photo1{
+    width:100px;
+}
