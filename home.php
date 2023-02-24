@@ -53,7 +53,7 @@ if ($row['role'] == 1) {
 
         <ul>
           <li><a href="#about-section">ABOUT</a></li>
-          <li> <a href="CSE.html">CSE</a></li>
+          <li> <a href="CSE.php">CSE</a></li>
           <li><a href="#CU">CONTACT US</a></li>
         </ul>
         <hr class="style1">
