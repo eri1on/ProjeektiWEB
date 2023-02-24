@@ -122,7 +122,7 @@ from the design of individual microprocessors, personal computers,<br> and super
 <img src="https://cdn-icons-png.flaticon.com/512/7838/7838457.png">
 
  </div>
-<a  href="#"><button class="learn-button">See More</button> </a>
+<a  href="slider/slider.php"><button class="learn-button">See More</button> </a>
 </li>
 <li>
   <h4 class="aok-title">Computer Architecture</h4>
