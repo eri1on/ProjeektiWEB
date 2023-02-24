@@ -1,7 +1,27 @@
 <?php
 
 
+session_start();
 include '../DB/connect.php';
+if(!isset($_SESSION['username'])){
+  header('location:../login.php');
+ 
+ }else{
+     $username = $_SESSION['username'];
+ }
+ 
+ // check if the user is an admin
+ $query = "SELECT role FROM user WHERE username='$username'";
+ $result = mysqli_query($con, $query);
+ $row = mysqli_fetch_assoc($result);
+ $role = $row['role'];
+ 
+ // display the add course button if the user is an admin
+ if (!$role == 1) {
+     header('location:../home.php');
+ }
+
+
 
 if(isset($_POST['submit'])){
 $name=$_POST['name'];
@@ -44,7 +64,7 @@ if($result){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Course Form</title>
+	<title>Create Course Form</title>
     <style>
 	body {
   font-family: Arial, sans-serif;
