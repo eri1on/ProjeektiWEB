@@ -1,3 +1,22 @@
+<?php
+
+
+session_start();
+include '../DB/connect.php';
+if(!isset($_SESSION['username'])){
+  header('location:../login.php');
+ 
+ }else{
+     $username = $_SESSION['username'];
+ }
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
