@@ -49,7 +49,7 @@ margin-left: 150px;
   width:320px;
   height: 30px;
   border-radius: 8px;
-    background-color:#0f0e17;
+    background-color:#DEFCF9;
     
 
 }/*
@@ -64,13 +64,13 @@ margin-left: 150px;
   border-radius: 8px;
   width:150px;
   height: 30px;
-    background-color: #0f0e17;
+  background-color:#DEFCF9;
 }
 .register-password{
   border-radius: 8px;
   width:150px;
   height: 30px;
-    background-color: #0f0e17;
+  background-color:#DEFCF9;
 }/*
 .telephone{
   margin-top:10px;
@@ -84,17 +84,17 @@ margin-left: 150px;
 }
 */
 .register-password:hover{
-  background-color: #DEF5E5;
+  background-color: #E5FDD1;
 }
 
 .register-email:hover{
-  background-color: #DEF5E5;
+  background-color: #E5FDD1;
 }
 #Name:hover{
-  background-color: #DEF5E5;
+  background-color: #E5FDD1;
 }
 #lastname:hover{
-  background-color: #DEF5E5;
+  background-color: #E5FDD1;
 }
 
 .submit{
