@@ -3,17 +3,25 @@ $succes=0;
 $user=0;
 
 
-if($_SERVER['REQUEST_METHOD']=='POST'){
+if ($_SERVER['REQUEST_METHOD']=='POST'){
     include 'DB/connect.php';
-     
+      
+    
+
+
      
     // Check if required fields are not empty
-    if(!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password'])){
+        if(!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password'])){
+         
+        
+
      
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+      
         $sql = "SELECT * FROM `user` WHERE username='$username'   " ;
         
         $result = mysqli_query($con,$sql);
@@ -24,7 +32,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
               //  echo "User already exists";
               $user=1;
             } else {
-                $sql = "INSERT INTO `user`(username,email,password) VALUES ('$username','$email','$password')";
+              $sql = "INSERT INTO `user`(username,email,password) VALUES ('$username','$email','$hashed_password')";
                 $result = mysqli_query($con,$sql);
                 if($result){
                   
@@ -37,7 +45,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             }
         }
       
-    } 
+    
+  }
 }
 ?>
 
