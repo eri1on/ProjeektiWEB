@@ -266,14 +266,15 @@ if ($row['role'] == 1) {
        <div class="your-div">
    <h4 class="h4-info">YOUR INFO</h4>
 
-   <form  method="post"  onsubmit="return  Validation();">
+   <form  method="post"  onsubmit="return  Validation()">
      <input id="name"type="text" placeholder="Name" name="name">
      <input id="lastname"type="text"placeholder="Last name" name="lastname"><br>
      <input id="email"type ="text"placeholder="Email" name="email"><br>
      <input id="telephone" type="tel" placeholder="Telephone" name="phone" ><br>
      <textarea id ="message"class="textarea" rows="6" cols="30" placeholder="Your Message" name="message" ></textarea><br>
+    
      <input id="submit" type="submit" name ="submit">
-     
+     <div id="error" style="color: red;"></div>
    </form>
        </div>
 
