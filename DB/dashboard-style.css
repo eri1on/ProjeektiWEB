@@ -1,0 +1,69 @@
+
+ body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+  }
+  /* Style for the buttons */
+  button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+
+  main {
+	max-width: 900px;
+	
+	
+}
+
+table {
+	border-collapse: collapse;
+	width: 70%;
+}
+
+th, td {
+    padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+    
+}
+
+th {
+	background-color: #333;
+	color: white;
+}
+
+.contact-id{
+    display: none;
+}
+.contact-section{
+   padding:20px;
+   margin-top: 100px;
+}
+.btn-delete{
+	background-color:burlywood;
+	border-style: none;
+	
+	
+	
+}
+.btn-delete a{
+	text-decoration: none;
+	font-weight: bold;
+	color:red;
+	
+}
