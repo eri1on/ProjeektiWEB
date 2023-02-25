@@ -25,14 +25,14 @@ header {
 
 
   main {
-	max-width: 900px;
+	max-width: 90%;
 	
 	
 }
 
 table {
 	border-collapse: collapse;
-	width: 70%;
+	width: 100%;
 }
 
 th, td {
@@ -41,6 +41,7 @@ th, td {
 	border-bottom: 1px solid #ddd;
     
 }
+
 
 th {
 	background-color: #333;
@@ -65,5 +66,7 @@ th {
 	text-decoration: none;
 	font-weight: bold;
 	color:red;
+  
 	
 }
+
