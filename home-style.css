@@ -359,7 +359,7 @@ justify-content: center;
 
 
 .textarea{
-  text-align: center;
+  text-align:left;
   margin-left: 120px;
   resize:none;
   border-radius: 8px;
@@ -379,4 +379,9 @@ justify-content: center;
 }
 #submit:hover{
   background-color: #A6D1E6;
+}
+
+#error{
+  margin-left: 170px;
+  margin-top: 20px;
 }
