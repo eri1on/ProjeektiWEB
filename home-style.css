@@ -1,6 +1,10 @@
 .logout{
-  BORDER-STYLE: outset;
+ 
   COLOR: FIREBRICK;
+}
+.dashboard-button{
+  
+  COLOR:green;
 }
 
 
@@ -312,7 +316,7 @@ justify-content: center;
 
 }
 #name:hover{
-  background-color: #B3FFAE;
+  background-color: #F5E9CF;
 }
 #lastname{
   text-align: center;
@@ -323,7 +327,7 @@ justify-content: center;
 
 }
 #lastname:hover{
-  background-color: #B3FFAE;
+  background-color: #F5E9CF;
 }
 
 #email{
@@ -337,16 +341,31 @@ justify-content: center;
 
 }
 #email:hover{
-  background-color: #B3FFAE;
+  background-color: #F5E9CF;
 }
+#telephone{
+  text-align: center;
+  margin-bottom: 25px;
+  margin-left: 70px;
+  border-radius: 8px;
+  width:325px;
+  height:30px;
+
+
+}
+#telephone:hover{
+  background-color: #F5E9CF;
+}
+
+
 .textarea{
   text-align: center;
-  margin-left: 50px;
-
+  margin-left: 120px;
+  resize:none;
   border-radius: 8px;
 }
 .textarea:hover{
-  background-color: #B3FFAE;
+  background-color: #E1EEDD;
 }
 
 #submit{
