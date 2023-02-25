@@ -60,8 +60,8 @@
                     <th>Name</th>
                     <th>Lastname</th>
                     <th>Email</th>
-                    <th>Telephone</th>
-                    <th class="message">Message</th>
+                    <th class="phone">Telephone</th>
+                    <th class="message" >Message</th>
                     <th class="contact-id">Contact_Id</th>
                 </tr>
                 
@@ -82,7 +82,7 @@
                             echo '<td>'.$name.'</td>';
                             echo '<td>'.$lastname.'</td>';
                             echo '<td>'.$email.'</td>';
-                            echo '<td>'.$telephone.'<td>';
+                            echo '<td >'.$telephone.'<td>';
                             echo '<td >'.$message.'<td>';
                         
                             
