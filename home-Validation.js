@@ -1,8 +1,8 @@
 
 function  Validation(){
 
-const NameRegex=/^[A-Za-z]+[a-zA-Z]{1,}/;
-const LastNameRegex=/^[A-Za-z]+[a-zA-Z]{1,}/;
+const NameRegex=/^[A-Za-z]{2,}$/;
+const LastNameRegex=/^[A-Za-z]{2,}$/;
 const EmailRegex=/^[a-z0-9]+([_.-][a-z0-9]+)*@[a-z0-9]+([.-][a-z0-9]+)*\.[a-z]{2,3}$/;
 const PhoneRegex=/^\d{9,10}$/;
 
@@ -12,61 +12,61 @@ var EmailInput=document.getElementById('email').value;
 var PhoneInput=document.getElementById('telephone').value;
 var MessageInput=document.getElementById('message').value;
 
-
+var errorDiv=document.getElementById('error');
 
 
 if(NameInput.trim()===""){
-    alert("Please enter your name !")
+    errorDiv.innerText="Please enter your Name";
     document.getElementById('name').focus();
     return false;
 }
 
 if(!NameRegex.test(NameInput)){
-    alert("Name should only include letters, and have at least 2 characters");
+    errorDiv.innerText="Name should only include letters, and have at least 2 characters";
     document.getElementById('name').focus();
     return false;
 }
 
 
 if(LastnameInput.trim()===""){
-  alert("Please enter you lastname");
+  errorDiv.innerText="Please enter you lastname";
   document.getElementById('lastname').focus();
   return false;
 }
 
 if(!LastNameRegex.test(LastnameInput)){
-     alert("Lastname should only include letters, and have at least 2 characters");
+     errorDiv.innerText="Lastname should only include letters, and have at least 2 characters";
      document.getElementById('lastname').focus();
      return false;
 }
 
 
 if(PhoneInput.trim()===""){
-    alert("Please enter you Phone Number !");
+    errorDiv.innerText="Please enter you Phone Number !";
     document.getElementById('telephone').focus();
     return false;
 }
 if(!PhoneRegex.test(PhoneInput)){
-  alert("Phone number can contains only numbers and have 9 or 10 digits");
+  errorDiv.innerText="Phone number can contains only numbers and have 9 or 10 digits";
   document.getElementById('telephone').focus();
   return false;
 }
 
 
 if(EmailInput.trim()===""){
-  alert("Email cannot be empty !");
+  errorDiv.innerText="Email cannot be empty !";
   document.getElementById("email").focus();
   return false;
 }
 
 if(!EmailRegex.test(EmailInput)){
-alert("Please enter a valid email address");
+errorDiv.innerText="Please enter a valid email address";
 document.getElementById('email').focus();
 return false;
 }
    
 if(MessageInput.trim()===""){
-  alert("Please enter a message !!");
+  errorDiv.innerText="Please enter a message !!";
   document.getElementById("message").focus();
   return false;
 
