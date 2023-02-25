@@ -344,3 +344,16 @@ color: white;
 #social_media a:hover{
   background-color: #007580;
 }
+
+@media only screen and (max-width:667px){
+  .learn-div{
+    flex-direction: column;
+  }
+  .pricing-grid{
+    flex-direction: column;
+  }
+  .main-div-ul{
+    flex-direction: column;
+  }
+}
+
