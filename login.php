@@ -13,27 +13,29 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
    $password=$_POST['password'];
    
    if (!empty($username) && !empty($password)) {
-   $sql ="select * from `user` where username ='$username' and password ='$password'";
-   
-   $result=mysqli_query($con,$sql);
-   if($result){
-       $num=mysqli_num_rows($result);
+    $sql ="select * from `user` where username ='$username'";
 
-       if($num>0){
-           $valid=1;
-           session_start();
-           $_SESSION['username']=$username;
-     
-           header('location:home.php');
-       }else {
-          $invalid=1;
-       }
-   }
-  
-   }
+    $result=mysqli_query($con,$sql);
+    if($result){
+        $num=mysqli_num_rows($result);
 
+        if($num>0){
+            $row = mysqli_fetch_assoc($result);
+            if(password_verify($password, $row['password'])){
+                $valid=1;
+                session_start();
+                $_SESSION['username']=$username;
+          
+                header('location:home.php');
+            }else{
+                $invalid=1;
+            }
+        }else {
+           $invalid=1;
+        }
+    }
 }
-
+}
 ?>
 
 
