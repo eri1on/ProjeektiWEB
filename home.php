@@ -275,6 +275,8 @@ if ($row['role'] == 1) {
     
      <input id="submit" type="submit" name ="submit">
      <div id="error" style="color: red;"></div>
+
+
    </form>
        </div>
 
