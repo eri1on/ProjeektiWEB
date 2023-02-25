@@ -12,9 +12,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
      
     // Check if required fields are not empty
         if(!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password'])){
-         
-        
-
      
         $username = $_POST['username'];
         $email = $_POST['email'];
