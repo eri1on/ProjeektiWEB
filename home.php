@@ -4,10 +4,62 @@ session_start();
 include 'DB/connect.php';
 if(!isset($_SESSION['username'])){
   header('location:login.php');
- 
+ exit;
  }else{
      $username = $_SESSION['username'];
  }
+
+ if(isset($_POST['submit'])){
+  $name=$_POST['name'];
+  $lastname=$_POST['lastname'];
+  $email=$_POST['email'];
+  $phone=$_POST['phone'];
+  $message=$_POST['message'];
+  
+  
+  if(empty($name) || empty($lastname) || empty($email) ||  empty($phone)||empty($message)){
+    echo 'Please fill all the fields.';
+  } else if(!preg_match('/^\d{9,10}$/',$phone)){
+    echo 'Phone number can contains only numbers and have 9 or 10 digits.';
+  }
+  else if ( !preg_match('/^[A-Za-z]+[a-zA-Z]{1,}/',$name)){
+    echo 'Name should only include letters, and have at least 2 characters' ;
+  } 
+  else if (!preg_match('/^[A-Za-z]+[a-zA-Z]{1,}/',$lastname)){
+    echo 'Lastname should only include letters, and have at least 2 characters' ;
+  }else if(!preg_match('/^[a-z0-9]+([_.-][a-z0-9]+)*@[a-z0-9]+([.-][a-z0-9]+)*\.[a-z]{2,3}$/',$email) ){
+    echo'Please enter a Valid Email Adress';
+  }
+  
+  else {
+  
+  $sql="insert into `contact`(contact_id,name,lastname,email,telephone,message) values('','$name','$lastname','$email',$phone,'$message')" ;
+  $result=mysqli_query($con,$sql);
+  
+  if($result){
+      //echo'data inserted successfull.';
+      header('location:home.php');
+  }else{
+      die(mysqli_error($con));
+  }
+  
+  
+  
+  }
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ?>
@@ -38,7 +90,9 @@ $row = mysqli_fetch_assoc($result);
 // check if user is an admin
 if ($row['role'] == 1) {
     // show Dashboard button for admin users
-    echo '<a href="DB/dashboard.php"><button class="dashboard-button">Dashboard</button></a>';
+
+ 
+    echo '<a href= "DB/dashboard.php" class="dashboard-button">Dashboard</a> ';
 }
     
     
@@ -212,12 +266,13 @@ if ($row['role'] == 1) {
        <div class="your-div">
    <h4 class="h4-info">YOUR INFO</h4>
 
-   <form action="mailto:cse.community@ubt-uni.net" method="post" enctype="text/plain">
-     <input id="name"type="text" placeholder="Name">
-     <input id="lastname"type="text"placeholder="Last name"><br>
-     <input id="email"type ="email"placeholder="Email"><br>
-     <textarea class="textarea" rows="6" cols="50" placeholder="Your Message"></textarea><br>
-     <input id="submit" type="submit"  onclick=" Validation()">
+   <form  method="post"  onsubmit="return  Validation();">
+     <input id="name"type="text" placeholder="Name" name="name">
+     <input id="lastname"type="text"placeholder="Last name" name="lastname"><br>
+     <input id="email"type ="text"placeholder="Email" name="email"><br>
+     <input id="telephone" type="tel" placeholder="Telephone" name="phone" ><br>
+     <textarea id ="message"class="textarea" rows="6" cols="30" placeholder="Your Message" name="message" ></textarea><br>
+     <input id="submit" type="submit" name ="submit">
      
    </form>
        </div>
