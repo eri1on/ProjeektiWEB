@@ -1,10 +1,9 @@
 function ValidimiFormes() {
   
 
-  const NameRegex = /^[A-Za-z]+[a-zA-Z]{1,}/;
+  const NameRegex = /^[a-zA-Z0-9_]{2,}$/;
   const EmailRegex = /^[a-z0-9]+([_.-][a-z0-9]+)*@[a-z0-9]+([.-][a-z0-9]+)*\.[a-z]{2,3}$/;
-  const PasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
-  ;
+  const PasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
   var NameInput = document.getElementById('Name').value;
   var EmailInput = document.getElementById('email').value;
@@ -12,19 +11,19 @@ function ValidimiFormes() {
 
   var errorDiv=document.getElementById('error');
 
-  if (NameInput === "") {
+  if (NameInput.trim() === "") {
     errorDiv.innerText="Please enter your username !";
     document.getElementById("Name").focus();
     return false;
   }
 
   if (!NameRegex.test(NameInput)) {
-   errorDiv.innerText="username can contain only letters and have at least 2 characters !";
+   errorDiv.innerText="username should have at least 2 characters and it can contain numbers and ' _ ' symbol !";
     document.getElementById("Name").focus();
     return false;
   }
 
-  if (EmailInput === "") {
+  if (EmailInput.trim() === "") {
     errorDiv.innerText="Email cannot be empty";
     document.getElementById("email").focus();
     return false;
@@ -36,7 +35,7 @@ function ValidimiFormes() {
     return false;
   }
 
-  if (PasswordInput === "") {
+  if (PasswordInput.trim()=== "") {
     errorDiv.innerText="Password cannot be empty !";
     document.getElementById("password").focus();
     return false;
