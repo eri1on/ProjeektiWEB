@@ -193,3 +193,16 @@ width:200px;
 .photo1{
     width:100px;
 }
+.a-slider{
+    color:yellowgreen;
+    text-decoration: none;
+    font-weight: bold;
+}
+.cse-button{
+    float: right;
+    margin-right: 100px;
+    width:100px;
+    border-style:outset;
+    border-color: aqua;
+    
+}
