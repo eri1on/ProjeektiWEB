@@ -81,31 +81,31 @@ if(!isset($_SESSION['username'])){
    
 
     <div>
+    <a class="logout" href="logout.php" class="btn">LOGOUT</a>
+
     <?php 
     
     $sql = "SELECT * FROM `user` WHERE username = '$username' LIMIT 1";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
-
-// check if user is an admin
-if ($row['role'] == 1) {
-    // show Dashboard button for admin users
-
- 
-    echo '<a href= "DB/dashboard.php" class="dashboard-button">Dashboard</a> ';
-}
-    
-    
-    
-    
     
     ?>
    
-    <a class="logout" href="logout.php" class="btn">LOGOUT</a>
+    
       <nav>
-        <img class="ubt-logo" src="https://www.ubt-uni.net/wp-content/uploads/2018/05/DCIMUNTLOGO123-6.png">
+        <img class="ubt-logo" src="https://cdn-icons-png.flaticon.com/512/3206/3206042.png">
 
         <ul>
+          <li>
+            
+          <?php  
+          if($row['role']==1){
+            echo'<a href= "DB/dashboard.php" > DASHBOARD</a>';
+          }
+          
+          ?>
+
+          </li>
           <li><a href="#about-section">ABOUT</a></li>
           <li> <a href="CSE.php">CSE</a></li>
           <li><a href="#CU">CONTACT US</a></li>
