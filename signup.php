@@ -1,7 +1,7 @@
 <?php
 $succes=0;
 $user=0;
-
+$backend_error="";
 
 if ($_SERVER['REQUEST_METHOD']=='POST'){
     include 'DB/connect.php';
@@ -13,11 +13,30 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     // Check if required fields are not empty
         if(!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password'])){
      
+        if(!preg_match('/^[a-zA-Z0-9_]{2,}$/',$_POST['username'])){
+            $backend_error="username should have at least 2 characters and it can contain numbers and ' _ ' symbol !";
+        }else{
+          
         $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        }
 
+        if(!preg_match('/^[a-z0-9]+([_.-][a-z0-9]+)*@[a-z0-9]+([.-][a-z0-9]+)*\.[a-z]{2,3}$/',$_POST['email'])){
+          $backend_error="Please enter a valid email address";
+        }else{
+          $email = $_POST['email'];
+        }
+
+        if(!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/',$_POST['password'])){
+          $backend_error="Password must be at least 8 characters long and contain at least one uppercase letter and one digit.";
+        }else{
+          $password = $_POST['password'];  
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        }
+
+
+     
+       
+     if($backend_error==""){
       
         $sql = "SELECT * FROM `user` WHERE username='$username'   " ;
         
@@ -27,6 +46,8 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
             $num = mysqli_num_rows($result);
             if($num > 0){
               //  echo "User already exists";
+              $backend_error="User already exists.";
+            
               $user=1;
             } else {
               $sql = "INSERT INTO `user`(username,email,password) VALUES ('$username','$email','$hashed_password')";
@@ -40,9 +61,16 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
                     die(mysqli_error($con));
                 }
             }
+        }  else{
+                 $backend_error="Database Error. Please try again later.";
         }
-      
-    
+
+
+
+        
+      } else {
+        $backend_error="Please fill in all required fields.";
+      }
   }
 }
 ?>
@@ -98,21 +126,21 @@ if ($user) {
 <form class="SignUpForm" method="POST" onsubmit="return ValidimiFormes();">
 
   <h2 class="h2">SIGN UP</h2>
-  <input id="Name" type="text" name="username" placeholder="Username"><br>
+  <input id="Name" type="text" name="username" placeholder="Username" autocomplete="off"><br>
 
-  <input id="email" class="register-email" name="email" type ="email" placeholder="Email">
-  <input  id="password" class="register-password" name="password" type="password"placeholder="Password"><br>
+  <input id="email" class="register-email" name="email" type ="email" placeholder="Email" autocomplete="off">
+  <input  id="password" class="register-password" name="password" type="password"placeholder="Password" autocomplete="off"><br>
   <div id="error" style="color: red;"></div>
   <input class="submit" type="submit">
+  <div id="Backend-error" style="color:orange" ></div>
 </form>
-
-
-
-
-
 </div>
 
+<script>
+ var backendErrorDiv=document.getElementById("Backend-error");
+ backendErrorDiv.innerText="<?php echo $backend_error;?>";
 
+</script>
 
 <script src="signup.js"></script>
 </body>
