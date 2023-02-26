@@ -1,16 +1,16 @@
 <?php
+session_start();
 include '../DB/connect.php';
 
-
-
-session_start();
 
 if(!isset($_SESSION['username'])){
   header('location:../login.php');
    exit;
  }
      $username = $_SESSION['username'];
- 
+
+
+    
  
  // check if the user is an admin
  $query = "SELECT role FROM user WHERE username='$username'";
@@ -23,6 +23,15 @@ if(!isset($_SESSION['username'])){
      header('location:../home.php');
      exit;
  }
+
+/*
+
+ if(!isset($_SESSION['updateid'])){
+     echo'No Course  id Specified';
+     exit;
+ }
+
+*/
 
 $id=$_GET['updateid'];
 
