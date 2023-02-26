@@ -1,38 +1,88 @@
-/* Reset default styles for some elements */
- body {
+
+ * {
 	margin: 0;
 	padding: 0;
 }
 
-/* Center the content horizontally */
+
+
 main {
 	max-width: 800px;
 	margin: 0 auto;
 	text-align: center;
+	
+	
 }
 
-/* Style for the header */
+
 header {
-	background-color: #333;
+	background-color:#333;
 	color: white;
-	padding: 20px;
+	
+	text-align: center;
+}
+header h1{
+	padding-top:10px;
+}
+header button{
+	margin:10px;
+	width: 90px;
+	border-radius: 10px;
+	
+	
+
+
+
+
 }
 
-/* Style for the marketing section */
+
+header a{
+	text-decoration: none;
+	
+}
+
 .marketing {
-	margin-bottom: 30px;
-	text-align: left;
+	margin-bottom: 200px;
+	margin-top: 80px;
+	text-align: center;
 	padding: 20px;
-	font-family:monospace;
+font-family: monospace;
 	font-weight: bold;
+	color:#4E6E81;
 }
 
-/* Style for the courses section */
+.img1{
+	width:100px;
+	margin-top:200px;
+
+}
+
+
+
+.course-img{
+		width:250px;
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+	
+.courses-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+
+
+
+
+
+
+
 .courses {
 	padding: 20px;
 }
 
-/* Style for the courses table */
+
 table {
 	border-collapse: collapse;
 	width: 100%;
@@ -87,6 +137,9 @@ th {
 	display: flex;
 	margin-left: 20px;
 	align-items: center;
+	display: inline-block;
+	margin-top: 120px;
+	
 }
 .btn-create  a{
 	text-decoration: none;
@@ -99,24 +152,16 @@ th {
 }
 
 
-
-/* Responsive styles for small screens */
-/*
-@media screen and (max-width: 600px) {
-	main {
-		max-width: 100%;
-	}
+.enroll a{
+	text-decoration: none;
+	font-weight: bold;
+	color:yellow;
 	
-	table {
-		display: block;
-	}
-	
-	th, td {
-		display: block;
-	}
-	
-	th {
-		text-align: center;
-	}
 }
-*/
+
+.enroll{
+	background-color:black;
+	border-style: none;
+	width:70px;
+}
+
