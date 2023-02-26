@@ -33,7 +33,7 @@ if(!isset($_SESSION['username'])){
   <header id="header">
     <div id="header-div-nav">
       <ul id="header-ul-links">
-        <li><a href="home.html">HOME</a></li>
+        <li><a href="home.php">HOME</a></li>
         <li><a href="#section2">STACK</a></li>
         <li><a href="#section-3">QUEUES</a></li>
         <li><a href="#wrapper">Searching Algorithms</a></li>
