@@ -27,8 +27,9 @@ if(!isset($_SESSION['username'])){
    <link rel="stylesheet" href="slider-style.css">
 </head>
 <body>
-
+<button class="cse-button"><a class="a-slider" href="../Cse.php">CSE  </a></button>
  <div class="topDiv">
+  
 
     <div class="left-div">
   <h2 class="title-h2">Web Engineering</h2>
