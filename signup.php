@@ -128,7 +128,7 @@ if ($user) {
   <h2 class="h2">SIGN UP</h2>
   <input id="Name" type="text" name="username" placeholder="Username" autocomplete="off"><br>
 
-  <input id="email" class="register-email" name="email" type ="email" placeholder="Email" autocomplete="off">
+  <input id="email" class="register-email" name="email" type ="text" placeholder="Email" autocomplete="off">
   <input  id="password" class="register-password" name="password" type="password"placeholder="Password" autocomplete="off"><br>
   <div id="error" style="color: red;"></div>
   <input class="submit" type="submit">
