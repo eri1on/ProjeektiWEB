@@ -49,9 +49,9 @@
     <body>
     <header>
       <h1>Dashboard</h1>
-      <button> <a href ="../Course/course.php">Course   </a></button>
-      <button> <a href="dashboard.php" > Contact </a></button>
-      <button> <a href="../home.php">Home</a></button>
+      <button> <a  class="a-course"  href ="../Course/course.php">Course   </a></button>
+      <button> <a class="a-contact"  href="dashboard.php" > Contact </a></button>
+      <button> <a class="a-home"    href="../home.php">Home</a></button>
     </header>
     <main>
       <section class="contact-section">
