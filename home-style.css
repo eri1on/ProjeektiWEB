@@ -1,16 +1,20 @@
 .logout{
- 
+  float: right;
   COLOR: FIREBRICK;
+ margin-right: 100px;
 }
 .dashboard-button{
   
   COLOR:green;
+ 
+  
 }
 
 
 *{
   margin: 0;
   padding: 0;
+  background-color: white !important;
 }
 .center{
   text-align: center;
@@ -81,7 +85,8 @@ header li a:hover{
   background-color: #EFF5F5 !important;
   margin-top: 150px;
   text-align: center;
-  padding-bottom: 150PX;
+  margin-bottom: 250px;
+  margin-top: 250px;
 
 }
 .title2{
@@ -122,12 +127,12 @@ header li a:hover{
 
 
  #team {
-  background-color: #e7f1f8 !important;
+  /*background-color: #e7f1f8 !important;*/
   font-family: 'Titillium Web', sans-serif;
   color: #3c4661;
   text-align: center;
   line-height: 20px;
-  padding-top: 40px;
+  margin-bottom: 200px;
 }
 
 #team h1 {
@@ -191,7 +196,7 @@ header li a:hover{
 
 #contact-id{
   display: flex;
-background-color: #FAF3E0;
+/*background-color: #FAF3E0;*/
 justify-content: center;
 
 }
@@ -286,10 +291,13 @@ justify-content: center;
 .your-div{
   width: 480px;
   height: 500px;
-  background-color: #FFEBB7;
+  
   margin-bottom: 40px;
   margin-top: 40px;
 
+}
+.your-div ,form{
+  background-color:#F5F5F5 !important;
 }
 .h4-info{
   text-align: center;
@@ -313,6 +321,8 @@ justify-content: center;
   border-radius: 8px;
   width:150px;
   height:30px;
+  border-style: outset;
+  border-color: white;
 
 }
 #name:hover{
@@ -323,7 +333,8 @@ justify-content: center;
   border-radius: 8px;
   width:150px;
   height:30px;
-
+border-style: outset;
+border-color: white;
 
 }
 #lastname:hover{
@@ -337,7 +348,8 @@ justify-content: center;
   border-radius: 8px;
   width:325px;
   height:30px;
-
+border-style: outset;
+border-color: white;
 
 }
 #email:hover{
@@ -350,7 +362,8 @@ justify-content: center;
   border-radius: 8px;
   width:325px;
   height:30px;
-
+  border-style:outset;
+  border-color: white;
 
 }
 #telephone:hover{
@@ -363,6 +376,8 @@ justify-content: center;
   margin-left: 120px;
   resize:none;
   border-radius: 8px;
+  border-style: outset;
+  border-color: white;
 }
 .textarea:hover{
   background-color: #E1EEDD;
@@ -376,6 +391,8 @@ justify-content: center;
   margin-left: 78px;
   margin-top: 25px;
   border-radius: 8px;
+  border-style: outset;
+  border-color: white;
 }
 #submit:hover{
   background-color: #A6D1E6;
